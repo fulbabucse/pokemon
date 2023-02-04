@@ -4,19 +4,7 @@ import React from "react";
 import logo from "../assets/logo.png";
 
 const pokemon = ({ data }) => {
-  const {
-    name,
-    height,
-    weight,
-    abilities,
-    image,
-    order,
-    types,
-    stats,
-    forms,
-    base_experience,
-    id,
-  } = data;
+  const { name, height, weight, abilities, image, types, stats, id } = data;
 
   return (
     <div className="lg:max-w-screen-lg mx-auto my-10">
@@ -24,8 +12,8 @@ const pokemon = ({ data }) => {
         <Image src={logo} height={150} width={150} alt="logo" />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-6 mt-10 place-items-center place-content-center">
-        <div className="space-y-5">
-          <h1 className="text-2xl font-semibold text-[#257BC4] capitalize">
+        <div className="space-y-5 w-full px-4 lg:px-6">
+          <h1 className="text-2xl font-semibold text-[#257BC4] capitalize lg:text-start text-center">
             {name} <span>#000{id}</span>
           </h1>
           <div className="border-2 border-red-400 grid grid-cols-2 place-items-center place-content-center gap-4 p-4 rounded-lg">
